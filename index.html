@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Grains & Ayurveda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Indian Grains</h1>
+        <p class="subtitle">Ayurvedic Wisdom for Daily Nourishment</p>
+    </header>
+
+    <nav class="filters">
+        <div class="filter-group">
+            <span class="filter-label">Dosha</span>
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="vata">Vata</button>
+            <button class="filter-btn" data-filter="pitta">Pitta</button>
+            <button class="filter-btn" data-filter="kapha">Kapha</button>
+        </div>
+        <div class="filter-group">
+            <span class="filter-label">Season</span>
+            <button class="filter-btn active" data-season="all">All</button>
+            <button class="filter-btn" data-season="winter">Winter</button>
+            <button class="filter-btn" data-season="spring">Spring</button>
+            <button class="filter-btn" data-season="summer">Summer</button>
+            <button class="filter-btn" data-season="monsoon">Monsoon</button>
+        </div>
+        <div class="filter-group">
+            <span class="filter-label">Type</span>
+            <button class="filter-btn active" data-type="all">All</button>
+            <button class="filter-btn" data-type="rice">Rice</button>
+            <button class="filter-btn" data-type="millet">Millets</button>
+            <button class="filter-btn" data-type="other">Other</button>
+        </div>
+    </nav>
+
+    <main class="grain-grid" id="grainGrid"></main>
+
+    <section class="dosha-faq" id="doshaFaq">
+        <h2>Understanding the Doshas</h2>
+        <div class="faq-intro" id="faqIntro"></div>
+        <div class="faq-grid" id="faqGrid"></div>
+    </section>
+
+    <section class="principles" id="principles">
+        <h2>Ayurvedic Principles</h2>
+        <div class="principles-grid" id="principlesGrid"></div>
+    </section>
+
+    <section class="seasonal-guide" id="seasonalGuide">
+        <h2>Seasonal Guide</h2>
+        <div class="seasons-grid" id="seasonsGrid"></div>
+    </section>
+
+    <footer>
+        <p>Based on classical Ayurvedic texts. Consult a qualified practitioner for personalized recommendations.</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

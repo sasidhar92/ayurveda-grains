@@ -1,0 +1,585 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: #fff;
+    color: #111;
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    text-align: center;
+    padding: 60px 0 40px;
+    border-bottom: 1px solid #111;
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    margin-top: 8px;
+    color: #555;
+}
+
+/* Filters */
+.filters {
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.filter-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #888;
+    min-width: 50px;
+}
+
+.filter-btn {
+    background: none;
+    border: 1px solid #ccc;
+    padding: 6px 14px;
+    font-family: 'Georgia', serif;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-btn:hover {
+    border-color: #111;
+}
+
+.filter-btn.active {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+}
+
+/* Grain Grid */
+.grain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 24px;
+    padding: 40px 0;
+}
+
+/* Grain Card */
+.grain-card {
+    border: 1px solid #ddd;
+    padding: 28px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.grain-card:hover {
+    border-color: #111;
+}
+
+.grain-card.expanded {
+    grid-column: 1 / -1;
+    max-width: 700px;
+}
+
+.grain-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.grain-name {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.grain-hindi {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 2px;
+}
+
+.grain-sanskrit {
+    font-size: 0.75rem;
+    color: #999;
+    font-style: italic;
+    margin-top: 2px;
+}
+
+.dosha-badges {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.dosha-badge {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 3px 8px;
+    border: 1px solid #111;
+}
+
+.dosha-badge.balances {
+    background: #111;
+    color: #fff;
+}
+
+.dosha-badge.increases {
+    background: #fff;
+    color: #bbb;
+    border-color: #ccc;
+}
+
+.grain-summary {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 8px;
+}
+
+.grain-season {
+    font-size: 0.75rem;
+    color: #888;
+    margin-top: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Expanded Details */
+.grain-details {
+    display: none;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.grain-card.expanded .grain-details {
+    display: block;
+}
+
+.detail-section {
+    margin-bottom: 20px;
+}
+
+.detail-section h4 {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.properties-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.property {
+    font-size: 0.85rem;
+}
+
+.property-label {
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.property-value {
+    color: #444;
+}
+
+.detail-list {
+    list-style: none;
+    padding: 0;
+}
+
+.detail-list li {
+    font-size: 0.85rem;
+    color: #444;
+    padding: 3px 0;
+    padding-left: 16px;
+    position: relative;
+}
+
+.detail-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 6px;
+    height: 1px;
+    background: #999;
+}
+
+.contraindication {
+    font-size: 0.8rem;
+    color: #888;
+    font-style: italic;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+}
+
+/* Dosha Detail */
+.dosha-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+}
+
+.dosha-item {
+    text-align: center;
+    padding: 12px;
+    border: 1px solid #eee;
+}
+
+.dosha-item-name {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+}
+
+.dosha-item-effect {
+    font-size: 0.8rem;
+    color: #444;
+}
+
+/* Dosha FAQ */
+.dosha-faq {
+    padding: 40px 0;
+    border-top: 1px solid #ddd;
+}
+
+.dosha-faq h2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.faq-intro p {
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.8;
+    max-width: 700px;
+    margin-bottom: 12px;
+}
+
+.faq-why {
+    font-style: italic;
+    color: #666 !important;
+    margin-bottom: 32px !important;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.dosha-card {
+    border: 1px solid #ddd;
+    padding: 24px;
+}
+
+.dosha-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+
+.dosha-card-header h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.dosha-card-sanskrit {
+    font-size: 0.9rem;
+    color: #888;
+    margin-left: 8px;
+}
+
+.dosha-elements {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #888;
+    border: 1px solid #ddd;
+    padding: 3px 8px;
+}
+
+.dosha-card-qualities {
+    font-size: 0.8rem;
+    color: #888;
+    font-style: italic;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.dosha-card-body {
+    font-size: 0.85rem;
+}
+
+.dosha-section {
+    margin-bottom: 12px;
+}
+
+.dosha-section-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #888;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.dosha-section p {
+    color: #444;
+    line-height: 1.6;
+}
+
+.dosha-balance-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.dosha-balanced, .dosha-imbalanced {
+    padding: 10px;
+    border: 1px solid #eee;
+}
+
+.dosha-balanced p {
+    color: #444;
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+.dosha-imbalanced p {
+    color: #666;
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+/* FAQ Questions */
+.faq-questions {
+    margin-top: 32px;
+    max-width: 700px;
+}
+
+.faq-questions-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #888;
+    margin-bottom: 16px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.faq-question {
+    font-size: 0.9rem;
+    padding: 14px 0;
+    position: relative;
+    padding-right: 24px;
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 14px;
+    font-size: 1rem;
+    color: #888;
+}
+
+.faq-item.open .faq-question::after {
+    content: '\2212';
+}
+
+.faq-answer {
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.7;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 300px;
+    padding-bottom: 14px;
+}
+
+/* Principles */
+.principles, .seasonal-guide {
+    padding: 40px 0;
+    border-top: 1px solid #ddd;
+}
+
+.principles h2, .seasonal-guide h2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.principle-card {
+    border: 1px solid #eee;
+    padding: 20px;
+}
+
+.principle-card h3 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+    color: #888;
+}
+
+.principle-card p, .principle-card li {
+    font-size: 0.85rem;
+    color: #444;
+    line-height: 1.7;
+}
+
+.principle-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.principle-card li {
+    padding: 3px 0;
+    padding-left: 16px;
+    position: relative;
+}
+
+.principle-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 6px;
+    height: 1px;
+    background: #999;
+}
+
+/* Seasons */
+.seasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.season-card {
+    border: 1px solid #eee;
+    padding: 20px;
+}
+
+.season-card h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+}
+
+.season-card .season-grains {
+    font-size: 0.85rem;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.season-card .season-reason {
+    font-size: 0.8rem;
+    color: #888;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    padding: 40px 0;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.75rem;
+    color: #999;
+    letter-spacing: 0.05em;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .grain-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .dosha-detail {
+        grid-template-columns: 1fr;
+    }
+
+    .properties-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grain-card.expanded {
+        max-width: 100%;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dosha-balance-grid {
+        grid-template-columns: 1fr;
+    }
+}
