@@ -4,7 +4,7 @@ const seasonsGrid = document.getElementById('seasonsGrid');
 
 let activeFilters = { dosha: 'all', season: 'all', type: 'all' };
 let expandedCard = null;
-let currentLang = localStorage.getItem('grain-lang') || 'en';
+let currentLang = localStorage.getItem('grain-lang') || 'te';
 
 function getData() {
     return currentLang === 'te' ? GRAINS_DATA_TE : GRAINS_DATA;
