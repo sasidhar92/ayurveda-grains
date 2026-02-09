@@ -8,58 +8,63 @@
 </head>
 <body>
     <header>
-        <h1>Indian Grains</h1>
-        <p class="subtitle">Ayurvedic Wisdom for Daily Nourishment</p>
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="te">తె</button>
+        </div>
+        <h1 id="siteTitle">Indian Grains</h1>
+        <p class="subtitle" id="siteSubtitle">Ayurvedic Wisdom for Daily Nourishment</p>
     </header>
 
-    <nav class="filters">
+    <nav class="filters" id="filtersNav">
         <div class="filter-group">
-            <span class="filter-label">Dosha</span>
-            <button class="filter-btn active" data-filter="all">All</button>
+            <span class="filter-label" data-i18n="dosha">Dosha</span>
+            <button class="filter-btn active" data-filter="all" data-i18n="all">All</button>
             <button class="filter-btn" data-filter="vata">Vata</button>
             <button class="filter-btn" data-filter="pitta">Pitta</button>
             <button class="filter-btn" data-filter="kapha">Kapha</button>
         </div>
         <div class="filter-group">
-            <span class="filter-label">Season</span>
-            <button class="filter-btn active" data-season="all">All</button>
-            <button class="filter-btn" data-season="winter">Winter</button>
-            <button class="filter-btn" data-season="spring">Spring</button>
-            <button class="filter-btn" data-season="summer">Summer</button>
-            <button class="filter-btn" data-season="monsoon">Monsoon</button>
+            <span class="filter-label" data-i18n="season">Season</span>
+            <button class="filter-btn active" data-season="all" data-i18n="all">All</button>
+            <button class="filter-btn" data-season="winter" data-i18n="winter">Winter</button>
+            <button class="filter-btn" data-season="spring" data-i18n="spring">Spring</button>
+            <button class="filter-btn" data-season="summer" data-i18n="summer">Summer</button>
+            <button class="filter-btn" data-season="monsoon" data-i18n="monsoon">Monsoon</button>
         </div>
         <div class="filter-group">
-            <span class="filter-label">Type</span>
-            <button class="filter-btn active" data-type="all">All</button>
-            <button class="filter-btn" data-type="rice">Rice</button>
-            <button class="filter-btn" data-type="millet">Millets</button>
-            <button class="filter-btn" data-type="other">Other</button>
+            <span class="filter-label" data-i18n="type">Type</span>
+            <button class="filter-btn active" data-type="all" data-i18n="all">All</button>
+            <button class="filter-btn" data-type="rice" data-i18n="rice">Rice</button>
+            <button class="filter-btn" data-type="millet" data-i18n="millets">Millets</button>
+            <button class="filter-btn" data-type="other" data-i18n="other">Other</button>
         </div>
     </nav>
 
     <main class="grain-grid" id="grainGrid"></main>
 
     <section class="dosha-faq" id="doshaFaq">
-        <h2>Understanding the Doshas</h2>
+        <h2 id="doshaFaqTitle">Understanding the Doshas</h2>
         <div class="faq-intro" id="faqIntro"></div>
         <div class="faq-grid" id="faqGrid"></div>
     </section>
 
     <section class="principles" id="principles">
-        <h2>Ayurvedic Principles</h2>
+        <h2 id="principlesTitle">Ayurvedic Principles</h2>
         <div class="principles-grid" id="principlesGrid"></div>
     </section>
 
     <section class="seasonal-guide" id="seasonalGuide">
-        <h2>Seasonal Guide</h2>
+        <h2 id="seasonalTitle">Seasonal Guide</h2>
         <div class="seasons-grid" id="seasonsGrid"></div>
     </section>
 
     <footer>
-        <p>Based on classical Ayurvedic texts. Consult a qualified practitioner for personalized recommendations.</p>
+        <p id="footerText">Based on classical Ayurvedic texts. Consult a qualified practitioner for personalized recommendations.</p>
     </footer>
 
     <script src="data.js"></script>
+    <script src="data-te.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
